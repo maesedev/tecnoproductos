@@ -10,7 +10,7 @@ interface product {
     mainImage: any;
     images: Array<any>;
     garantia: string;
-    categoria: string;
+    categoria: string | undefined;
     invisible: boolean;
     colors?: Array<string>;
     video?: any
@@ -25,7 +25,7 @@ const {
     P2962 , GXT310C
 } = useGetImages()
 
-export const ArrayCategorias = [
+export const ArrayCategorias  = [
     {
         name: "Audifonos Bluetooth",
         avatar: VG02.VG02Main
@@ -54,7 +54,7 @@ export function useGetData() {
             images: LY021.Images,
             garantia: "3 meses",
             invisible: false,
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             colors: ["Negro", "Rojo", "Azul"]
         },
         {
@@ -66,7 +66,7 @@ export function useGetData() {
             mainImage: H2013D.H2013DMain,
             images: H2013D.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
         },
         {
@@ -78,7 +78,7 @@ export function useGetData() {
             mainImage: JTY900.JTY900Main,
             images: JTY900.Images,
             garantia: "2 meses",
-            categoria: ArrayCategorias[1].name,
+            categoria: ArrayCategorias[1]?.name,
             invisible: false
         },
         {
@@ -90,7 +90,7 @@ export function useGetData() {
             mainImage: VG02.VG02Main,
             images: VG02.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false
         },
         {
@@ -102,7 +102,7 @@ export function useGetData() {
             mainImage: X15.X15Main,
             images: X15.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[2].name,
+            categoria: ArrayCategorias[2]?.name,
             invisible: false
         },
         {
@@ -114,7 +114,7 @@ export function useGetData() {
             mainImage: A7.A7Main,
             images: A7.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false
         },
         {
@@ -126,7 +126,7 @@ export function useGetData() {
             mainImage: Q25.Q25Main,
             images: Q25.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
             video: "https://youtu.be/ozF7ZqgvJds"
         },
@@ -139,7 +139,7 @@ export function useGetData() {
             mainImage: P47.P47Main,
             images: P47.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
             video: "https://youtu.be/nmXF8YO1GZg"
         },
@@ -152,7 +152,7 @@ export function useGetData() {
             mainImage: VG121.VG121Main,
             images: VG121.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
             video: "https://youtu.be/7E_AB5bT4Gg"
         },
@@ -165,7 +165,7 @@ export function useGetData() {
             mainImage: E6S.E6SMain,
             images: E6S.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
             video: "https://youtu.be/I0_uwObm7ps"
         },
@@ -178,7 +178,7 @@ export function useGetData() {
             mainImage: G02.G02Main,
             images: G02.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
             video: "https://youtu.be/wJN_9L_EF2c",
             colors: ["negro", "blanco", "rojo"]
@@ -192,7 +192,7 @@ export function useGetData() {
             mainImage: JS25.JS25Main,
             images: JS25.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
             video: "https://youtu.be/nXhX7SfEqsQ",
             colors: ["negro", "blanco"]
@@ -206,7 +206,7 @@ export function useGetData() {
             mainImage: HS400A.HS400AMain,
             images: HS400A.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
         },
         {
@@ -218,7 +218,7 @@ export function useGetData() {
             mainImage: P2962.P2962Main,
             images: P2962.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
         },
         {
@@ -230,7 +230,7 @@ export function useGetData() {
             mainImage: GXT310C.GXT310CMain,
             images: GXT310C.Images,
             garantia: "3 meses",
-            categoria: ArrayCategorias[0].name,
+            categoria: ArrayCategorias[0]?.name,
             invisible: false,
         },
 
