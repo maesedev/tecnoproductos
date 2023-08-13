@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next';
 import { useSession } from 'next-auth/react';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Slider, SliderImage } from '~/components/Slider/slider';
 import { useGetData } from '../../hooks/useGetData';
 import Categorias from '../components/categories';
@@ -60,9 +59,9 @@ const Home: NextPage = (_props: InferGetServerSidePropsType<typeof getServerSide
   );
 };
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async ({ locale }) => ({
+export const getServerSideProps: GetServerSideProps<HomeProps> = async ({}) => ({
   props: {
-    ...(await serverSideTranslations(locale ?? 'en', ['nextjs'])),
+    ...['nextjs'],
   },
 });
 

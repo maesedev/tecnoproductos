@@ -80,3 +80,22 @@ model User {
 
     @@map("users")
 }
+
+model Product {
+    id                      Int      @id @default(autoincrement())
+    name                    String
+    description             String
+    category                String
+    price                   Int
+    discountPrice           Int?
+    stock                   Int
+    image                   String
+    createdAt               DateTime @default(now())
+    updatedAt               DateTime @updatedAt
+    manufacturer            String
+    modelNumber             String
+    technicalSpecifications String?
+    averageRating           Float?
+    link                    String
+    tags                    String[]
+}

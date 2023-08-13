@@ -2,15 +2,19 @@
 'use client';
 
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import AddToCartButton from '~/components/AddToCartButton';
 import NoProductSection from '~/components/noproduct';
 import { useGetProduct } from '../../../../hooks/useGetProduct';
 
-export default function ProductPage({ params }: { params: { id: number } }) {
-  const Product = useGetProduct(params.id);
+export default function ProductPage() {
+  const { query } = useRouter();
+  const Product = useGetProduct(parseFloat(`${query.id}`));
 
   if (!Product || Product?.invisible) {
-    return <NoProductSection />;
+    console.log('Error 404');
+
+    return <></>;
   }
 
   const Price = '$' + Product.price.toLocaleString('es-ES') + ',00';
