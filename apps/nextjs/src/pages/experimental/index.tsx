@@ -31,8 +31,6 @@ export default function experimental() {
   };
   return (
     <>
-      <h1>change</h1>
-      {products ? <p>{products.name}</p> : <p>Fetching data...</p>}
       <button className="block bg-green-600 px-4 py-2 " onClick={handleCreateProduct}>
         Create test product
       </button>

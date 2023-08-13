@@ -70,6 +70,7 @@ model User {
     id            String    @id @default(cuid())
     name          String?
     email         String?   @unique
+    role          String    @default("user")
     image         String    @default("")
     emailVerified DateTime? @map("email_verified")
     accounts      Account[]
@@ -87,9 +88,11 @@ model Product {
     description             String
     category                String
     price                   Int
+    colors                  String[]
     discountPrice           Int?
     stock                   Int
     image                   String
+    images                  String[]
     createdAt               DateTime @default(now())
     updatedAt               DateTime @updatedAt
     manufacturer            String
