@@ -55,6 +55,7 @@ const Home: NextPage = (_props: InferGetServerSidePropsType<typeof getServerSide
           ),
         )}
       </div>
+      <a href="/experimental">exp</a>
     </section>
   );
 };
